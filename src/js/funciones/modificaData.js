@@ -10,10 +10,10 @@ export const modificaData= (tiempo)=>{
     let mes = fecha.getMonth()
 
     //vevuel la hora en todo su formatos
-    let ano = fecha.getYear()
-    let h = fecha.getH()
-    let m = fecha.getM()
-    let s = fecha.getS()
+    let ano = fecha.getFullYear()
+    let h = String(fecha.getHours()).padStart(2,'0')
+    let m = String(fecha.getMinutes()).padStart(2,'0')
+    let s = String(fecha.getSeconds()).padStart(2,'0')
 
     //cremos un array que contenga los meses de un año
     const mesesNombres = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
@@ -22,6 +22,6 @@ export const modificaData= (tiempo)=>{
 
 
     //Devolvemos el dia del array del mes(un nombre) y todo el contenido de las horas 
-    return(dia + " " + mesesNombres[mes] +   " " + ano + "-" + h + ":" + m + ":" + s);
+    return(dia + " " + mesesNombres[mes] +   " - " + ano + " " + h + ":" + m + ":" + s);
 
 }
