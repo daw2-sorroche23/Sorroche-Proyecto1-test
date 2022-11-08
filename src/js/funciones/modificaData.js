@@ -1,21 +1,27 @@
 export const modificaData= (tiempo)=>{
 
-    //creamos un objeto del tipo Date
+    //Creamos un objeto del tipo Date
     let fecha = new Date(tiempo)
 
-    //devuelve el dia 
+    //Devolvemos  el dia 
     let dia = fecha.getDate()
 
-    //devuelve el mes 
+    //Devolvemos el mes 
     let mes = fecha.getMonth()
 
-    //vevuel la hora en todo su formatos
+    //Devolvemos la hora en todo su formatos
+
+    //El padstart lo que hace es rellenar la variable con lo que pongamos hasta alcanzar una longitud dada. 
+
+    //Si el valor que ponemos es menor a 2 como pr ejemplo 1 nos devolvera 01 
+
+
     let ano = fecha.getFullYear()
-    let h = String(fecha.getHours()).padStart(2,'0')
+    let h = String(fecha.getHours()).padStart(2,'0') 
     let m = String(fecha.getMinutes()).padStart(2,'0')
     let s = String(fecha.getSeconds()).padStart(2,'0')
 
-    //cremos un array que contenga los meses de un año
+    //Creamos un array que contaga los meses de un año
     const mesesNombres = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"
     ];

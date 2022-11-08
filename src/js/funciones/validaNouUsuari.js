@@ -15,12 +15,13 @@ export const validaNouUsuari = (usuari)=>{
         }
     }
 
+
     //Hacemos un bucle que llama el nick de el array dades para comprobra si el que usuario ponga esta repetido
-    for(indice=0;indice<dades.length;indice++){
+    for(let indice=0;indice<dades.length;indice++){
         if(dadesUsuari.nick == dades[indice].nick){
             return{
                 error: true,
-                missatge: "Aquest usuari ya existeix"
+                missatge: "Aquest usuari ja existeix"
             }
         }
     }
@@ -30,13 +31,14 @@ export const validaNouUsuari = (usuari)=>{
     if(dadesUsuari.pass.length<3 || dadesUsuari.pass.length>10){
         return{
             error:true,
-            missatge:"La contrasenya no es correcte"
+            missatge:"La contrasenya no és correcte"
         }
+
     //Hacemos un else en el utimo if ya que si hemos llegado hasta aqui los demas paramatros han sido correctos i mandamos un mensage que esta bien 
     }else{
         return{
             error:false,
-            missatge:"L'usuari amb nick: " + dadesUsuari.nick + " s'ha creat correctament"
+            missatge:"L’usuari amb nick: " + dadesUsuari.nick + " s’ha creat correctament"
         }
     }
 

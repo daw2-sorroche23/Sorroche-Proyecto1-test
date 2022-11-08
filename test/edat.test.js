@@ -5,6 +5,12 @@ import { should } from 'chai';  // Using Should style
 import { Edat } from "../src/js/funciones/edat.js"
 should();  // Modifies `Object.prototype`
 
+//Describe contiene la descripcion de lo que vamos a testear
+
+//it contiene una descripción del testing y luego contiene un función arrow
+
+//assert.equal compara argumentos que pongamos y produce un error si no son iguales
+
 
 describe("Función edat", ()=>{
     it("Recibe la fecha de nacimiento en formato texto (2022/10/26 00:00:00) y devuelve la edad de la persona (49)", ()=>{

@@ -4,6 +4,14 @@ import { expect } from 'chai';  // Using Expect style
 import { should } from 'chai';  // Using Should style
 import { validaNouUsuari } from "../src/js/funciones/validaNouUsuari.js"
 
+
+//Describe contiene la descripcion de lo que vamos a testear
+
+//it contiene una descripción del testing y luego contiene un función arrow
+
+//assert.equal compara argumentos que pongamos y produce un error si no son iguales
+
+
 describe("Función validaNouusuari ...", ()=>{
    
     it("si el usuario tiene menos de 3 letras o más de 10", ()=>{
